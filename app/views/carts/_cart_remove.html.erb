@@ -1,0 +1,20 @@
+<div style="text-align:center;">
+  <% product_holder = Hash.new(0)%>
+  <% total_price = []%>
+
+  <%
+  products.each do |v|
+    product_holder[v.name] -= 1
+    total_price << v.price
+  end
+  %>
+  <h3> Current Shopping Cart </h3>
+  <% product_holder.each do |k,v|%>
+  <div class="<%=k%>">
+    <%= "#{k} x #{v}"  %><a id="item-del-btn" class="close" style="clear: both;">x</a>
+    <br>
+  </div>
+  <%end %>
+  Total: $<%= total_price.reduce(:+) %>
+  <br>
+</div>
