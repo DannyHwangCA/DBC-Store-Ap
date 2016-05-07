@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   has_many :carts
   has_many :products, through: :carts
 
+  has_many :histories
+
   before_save {self.email.downcase!}
 
   validates :username, presence: true, length: { maximum: 50 }

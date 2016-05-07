@@ -1,4 +1,4 @@
-<div style="text-align:center;">
+<div style="text-align:center;" class="jumbotron my-jumbotron">
   <% product_holder = Hash.new(0)%>
   <% total_price = []%>
 
@@ -15,6 +15,12 @@
     <br>
   </div>
   <%end %>
-  Total: $<%= total_price.reduce(:+) %>
+  <%end %>
+    <% if total_price.empty? %>
+      <h4> Shopping Cart empty </h4>
+      <h4> Total: $<%="0.00"%> </h4>
+    <% else %>
+      <h4> Total: $<%= total_price.reduce(:+) %></h4>
+    <% end %>
   <br>
 </div>

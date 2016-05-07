@@ -6,13 +6,15 @@ Rails.application.routes.draw do
 
   get 'admin' => "admins#show"
 
-
+  get 'thankyou' => 'carts#thankyou'
 
   resources :categories
 
   resources :products
 
   resources :carts
+
+  resources :histories
 
   resources :users
 
