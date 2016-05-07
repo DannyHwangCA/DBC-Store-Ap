@@ -1,0 +1,57 @@
+<% if @histories.count == 0%>
+<h1 class="page-header">Order History</h1>
+<div class="jumbotron my-jumbotron">
+  Order History Is Empty.
+</div>
+<% else %>
+<% @histories.each do |info|
+@created_at = info.created_at
+
+holder = Hash.new(0)
+total_paid = []
+  info.orders.each do |product_id|
+    product = Product.find(product_id)
+    holder[product_id] += 1
+    total_paid << product.price
+
+  end
+end %>
+
+<div class="container">
+  <h1 class="page-header">Order History</h1>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <% @histories.each do |info|
+          holder = Hash.new(0)
+          total_paid = []
+            info.orders.each do |product_id|
+              product = Product.find(product_id)
+              holder[product_id] += 1
+              total_paid << product.price
+          %>
+          <% end %>
+          <th>Product</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+            <% holder.each do |k,v| %>
+            <% item = Product.find(k) %>
+        <tbody>
+          <tr>
+            <td><%= item.name %></td>
+            <td><%= number_to_currency(item.price)%></td>
+            <td><%= "x #{v}" %></td>
+          </tr>
+          <% end %>
+          <td> Order Purchased at: <%= info.created_at %> </td>
+          <td>Order total: <%= number_to_currency(total_paid.reduce(:+)) %></td>
+        </tbody>
+        <% end %>
+    </table>
+  </div>
+</div>
+
+<% end %>

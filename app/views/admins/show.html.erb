@@ -1,14 +1,13 @@
+<div class="jumbotron my-jumbotron">
 <h2><%= link_to "Add a category", new_category_path %></h2>
 <h2><%= link_to "Add a product", new_product_path %></h2>
 
-<br>
   <div class="row">
-    <ul>
+    <h2>Categories</h2>
       <% @categories.each do |cat| %>
-        <li><p><%= link_to cat.name, category_path(cat.id) %></p></li>
+        <p><%= link_to cat.name, category_path(cat.id) %></p>
       <% end %>
-    </ul>
-
+</div>
 
       <% @products.each do |product| %>
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
@@ -26,9 +25,8 @@
           </div>
         </div>
       <% end %>
-  </div>
+
          <div class="container">
-          <h1 class="page-header">Administrator Dashboard</h1>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -38,8 +36,6 @@
                   <th>Price</th>
                   <th>Stock</th>
                   <th>Description</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
                 </tr>
               </thead>
                 <% @products.each_with_index do |product, index| %>
@@ -50,8 +46,7 @@
                     <td><%= product.price%></td>
                     <td><%= product.stock%></td>
                     <td><%= product.description%></td>
-                    <td><%= link_to 'Edit', ""%></td>
-                    <td><%= link_to "delete", "", method: :delete %></td>
+
                   </tr>
                 </tbody>
                 <% end %>

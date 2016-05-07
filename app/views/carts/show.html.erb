@@ -1,0 +1,39 @@
+  <% product_holder = Hash.new(0)%>
+  <% total_price = []%>
+  <%
+  @cart.each do |v|
+    product_holder[v.name] += 1
+    total_price << v.price
+  end
+  %>
+
+ <div class="container">
+  <h1 class="page-header">Shopping Kart</h1>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+        <% product_holder.each do |k,v|%>
+        <% prod = Product.find_by name: k %>
+        <tbody>
+          <tr>
+            <td><%= k %></td>
+            <td><%= number_to_currency(prod.price) %></td>
+            <td><%= "x #{v}"%></td>
+          </tr>
+        <% end %>
+          <td>Total Price: <%= number_to_currency(total_price.reduce(:+)) %></td>
+        </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="jumbotron my-jumbotron">
+  <%= button_to "Checkout", histories_path, class: "btn btn-lg btn-primary", method: :post %>
+</div>
+

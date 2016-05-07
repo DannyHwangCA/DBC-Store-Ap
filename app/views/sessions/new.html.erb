@@ -1,7 +1,20 @@
+<style type="text/css">
+.container {
+    width: 60%;
+    clear: both;
+}
+.container input {
+    width: 100%;
+    clear: both;
+}
+</style>
+<div class="jumbotron my-jumbotron container">
 <h1>Login</h1>
 
 <%= form_for :session, url: sessions_path do |f|%>
 Email: <%= f.text_field :email %>
 Password: <%= f.password_field :password %>
+<br><br>
 <%= f.submit "Login" %>
 <% end %>
+</div>

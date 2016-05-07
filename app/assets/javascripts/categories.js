@@ -13,15 +13,14 @@ $( document ).ready(function() {
     .done(function(res) {
       $('.shoppingcartshow').empty();
       $(res).appendTo('.shoppingcartshow');
-      var oldStock = $('#stock'+productId).html()
-      if (oldStock > 0) {
-        $('#stock'+productId).html(oldStock -1)
-      }
-
-
     })
     .fail(function() {
       console.log("error");
+    });
+
+    $.get("/carts", function(res) {
+    console.log(res)
+    $('#kart-button > a').html('Shopping Kart (' + res + ')' );
     });
   })
 
@@ -38,12 +37,16 @@ $( document ).ready(function() {
       $('.shoppingcartshow').empty();
       $(res).appendTo('.shoppingcartshow');
       var prod = productName.replace(/\s/, '');
-      var oldStock = $(".product-" + prod).html();
-      console.log(".product-" + prod);
-      $(".product-" + prod).html(parseInt(oldStock) +1);
+      // var oldStock = $(".product-" + prod).html();
+      // $(".product-" + prod).html(parseInt(oldStock) +1);
     })
     .fail(function() {
       console.log("error");
+    });
+
+    $.get("/carts", function(res) {
+    console.log(res)
+    $('#kart-button > a').html('Shopping Kart (' + res + ')' );
     });
   })
 
