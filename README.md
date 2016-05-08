@@ -38,7 +38,7 @@ Welcome to the Future of Fresch!
 
 ![alt tag](http://i.imgur.com/31og47t.png)
 
-### Installaion Notes
+### Installation Notes
 
 1. Rails 4.2.6
 2. Ruby 2.2.5
