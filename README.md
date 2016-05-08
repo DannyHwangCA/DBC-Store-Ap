@@ -1,5 +1,7 @@
 # Welcome to the Krispy Tech Read Me.
 
+Welcome to the Future of Fresch!
+
 ## Initial User/Admin Stories
 
 ### As A User:
@@ -27,9 +29,35 @@
   2. I want to be able to delete and edit products.
   3. I want to be able to easily review all products and categories I created.
 2. I want certain sections of the site to only be available to myself and other admins.
+3. I want a special designation for my admin accounts and I want the site's common login to check for admin privileges.
+4. I want a responsive site that can be easily viewed on mobile devices.
+5. I want to be able to logout so I can view the site as a regular account.
+6. I do not want a shopping cart on my admin navbar as I do not want to have my admins accidentally place an order.
 
+![alt tag](http://i.imgur.com/DBM1q2n.jpg)
 
+![alt tag](http://i.imgur.com/31og47t.png)
 
+### Installaion Notes
+
+1. Rails 4.2.6
+2. Ruby 2.2.5
+3. Bcrypt 3.1.7
+4. BootStrap 3.2.0
+5. Post Gres 0.10.3
+6. Capybara 2.7.1
+7. Database Cleaner 1.5.3
+8. Faker 1.6.3
+9. Haml Rails 0.9.0
+10. Jquery-rails 4.1.1
+11. Pry 0.10.3
+12. Thin 1.6.4
+13. Mail Gun 1.0.2
+
+### Deployment & Resources
+
+Heroku Link: https://lit-waters-72995.herokuapp.com/
+Github Link: https://github.com/DannyHwangCA/DBC-Store-Ap
 
 
 
