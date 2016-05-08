@@ -57,6 +57,7 @@ Welcome to the Future of Fresch!
 ### Deployment & Resources
 
 Heroku Link: https://lit-waters-72995.herokuapp.com/
+
 Github Link: https://github.com/DannyHwangCA/DBC-Store-Ap
 
 
