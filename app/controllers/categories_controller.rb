@@ -23,19 +23,6 @@ class CategoriesController < ApplicationController
     redirect_to admin_path
   end
 
-  def edit
-
-  end
-
-  def update
-
-  end
-
-
-  def destroy
-
-  end
-
   private
   def cat_params
     params.require(:category).permit(:name)
