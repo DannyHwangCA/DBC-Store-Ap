@@ -1,16 +1,18 @@
 <div class="jumbotron my-jumbotron">
 <% if @products.count > 0 %>
   <div class="shoppingcartshow"></div>
+  <h1> Products </h1>
   <div class="row" id="products-list" >
+  <br>
     <% @products.each do |pro| %>
       <div style="text-align:center;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 
-        <%= link_to image_tag("money.jpg", class: "img-thumbnail", alt: "image placeholder", data: { src: "holder.js/200x200" }, width: '250', height: '250'), product_path(pro.id)%>
+        <%= link_to image_tag("computer.png", class: "img-thumbnail", alt: "image placeholder", data: { src: "holder.js/200x200" }, width: '250', height: '250'), product_path(pro.id)%>
 
         <h2><%= truncate(pro.name, length: 15) %></h2>
         Stock:<p id="stock<%= pro.id.to_s %>" class="product-<%=pro.name.gsub(/\s/, "")%>" ><%= pro.stock %></p>
         <% if current_user %>
-          <button id=<%= pro.id.to_s %> class="add-2-kart" type="button">Add 2 Kart</button>
+          <button id=<%= pro.id.to_s %> class="add-2-kart" type="button">Add to Cart</button>
           <br><br>
         <% end %>
       </div><!--/.col-xs-6.col-lg-4-->
