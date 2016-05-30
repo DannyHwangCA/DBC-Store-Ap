@@ -1,4 +1,4 @@
-# Welcome to the Master Ware Read Me.
+# Master Ware Full Stack Shopping Cart Shop. 
 
 ## Introduction
 
@@ -17,6 +17,7 @@ Additionally, User & Adminstrator authentications / validations are also availab
 ## How to use.
 
 Regular user login: Email - tom@tom.com, Password - tom
+
 Administrator user login: tim@time.com, Password - tim
 
 ## Initial User/Admin Stories
@@ -50,6 +51,8 @@ Administrator user login: tim@time.com, Password - tim
 4. I want a responsive site that can be easily viewed on mobile devices.
 5. I want to be able to logout so I can view the site as a regular account.
 6. I do not want a shopping cart on my admin navbar as I do not want to have my admins accidentally place an order.
+
+###Our Database Schema
 
 ![alt tag](http://i.imgur.com/31og47t.png)
 
