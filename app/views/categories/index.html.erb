@@ -2,6 +2,7 @@
 <div class="jumbotron my-jumbotron">
   <div class="row">
   	<h1 style="text-align:center;">Categories</h1>
+  	<br><br>
     <% @categories.each do |info| %>
       <div style="text-align:center;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
         <%= link_to image_tag("lorem.png", class: "img-thumbnail", alt: "image placeholder", data: { src: "holder.js/200x200" }, width: '250', height: '250'), category_path(info.id)%>

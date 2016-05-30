@@ -1,6 +1,23 @@
-# Welcome to the Krispy Tech Read Me.
+# Welcome to the Master Ware Read Me.
 
-Welcome to the Future of Fresch!
+## Introduction
+
+This is a Dynamic Shopping Site created using Ruby on Rails.
+
+It features many functionalities including a dynamic shopping cart created with AJAX, JQUERY, and Javascript.
+
+A full front end enables users to fill a shopping cart, review products, and place orders.
+
+A full backend enables administrators to create categories, create products, and assign categores to products. 
+
+Mailgun was also used to send customer custom greeting / checkout emails. 
+
+Additionally, User & Adminstrator authentications / validations are also available. 
+
+## How to use.
+
+Regular user login: Email - tom@tom.com, Password - tom
+Administrator user login: tim@time.com, Password - tim
 
 ## Initial User/Admin Stories
 
@@ -33,8 +50,6 @@ Welcome to the Future of Fresch!
 4. I want a responsive site that can be easily viewed on mobile devices.
 5. I want to be able to logout so I can view the site as a regular account.
 6. I do not want a shopping cart on my admin navbar as I do not want to have my admins accidentally place an order.
-
-![alt tag](http://i.imgur.com/DBM1q2n.jpg)
 
 ![alt tag](http://i.imgur.com/31og47t.png)
 
