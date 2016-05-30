@@ -18,7 +18,9 @@ Additionally, User & Adminstrator authentications / validations are also availab
 
 Regular user login: Email - tom@tom.com, Password - tom
 
-Administrator user login: tim@time.com, Password - tim
+Administrator user login: tim@tim.com, Password - tim
+
+Simply login to run site. 
 
 ## Initial User/Admin Stories
 
