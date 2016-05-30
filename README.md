@@ -1,4 +1,4 @@
-# Master Ware INC - Full Stack Shopping Cart Shop. 
+## Master Ware INC - Full Stack Shopping Cart Site. 
 
 ## Introduction
 
